@@ -2,168 +2,185 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Dashboard</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" container="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css" media="(min-width: 320px)">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)">
 </head>
 <body>
-    <main class="container">
 
-        <header>
-            <section class="table_information">
-                <h1 class="title">Social Media Dashboard</h1>
-                <p class="title__subtitle">Total Followers: 23,004</p>
-            </section>
-            <section class="dark_mode">
-                    <span class="dark_mode__title">White Mode</span>
-                    <div class="dark_mode__container">
-                        <label for="checkbox">
-                            <input type="checkbox" class="checkbox btn_disabled">
-                            <button class="btn_disabled"></button>
-                        </label>
-                    </div>
-                    
-                </input>
-            </section>
-        </header>
-
-        <section class="cards_container">
-            <article class="card">
-                <header class="card_header">
-                    <i class="social_icon facebook"></i>
-                    <span class="user_name">@nathanf</span>
-                </header>
-                <h3 class="user_followers">1987</h3>
-                <p class="followers_subtitle">Followers</p>
-                <p class="followers_ratio"><i class="arrow_icon"></i>12 Today</p>
-            </article>
-
-            <article class="card">
-                <header class="card_header">
-                    <i class="social_icon twitter"></i>
-                    <span class="user_name">@nathanf</span>
-                </header>
-                <h3 class="user_followers">1987</h3>
-                <p class="followers_subtitle">Followers</p>
-                <p class="followers_ratio"><i class="arrow_icon"></i>12 Today</p>
-            </article>
-
-            <article class="card">
-                <header class="card_header">
-                    <i class="social_icon instagram"></i>
-                    <span class="user_name">@nathanf</span>
-                </header>
-                <h3 class="user_followers">1987</h3>
-                <p class="followers_subtitle">Followers</p>
-                <p class="followers_ratio"><i class="arrow_icon"></i>12 Today</p>
-            </article>
-
-            <article class="card">
-                <header class="card_header">
-                    <i class="social_icon youtube"></i>
-                    <span class="user_name">@nathanf</span>
-                </header>
-                <h3 class="user_followers">1987</h3>
-                <p class="followers_subtitle">Followers</p>
-                <p class="followers_ratio"><i class="arrow_icon"></i>12 Today</p>
-            </article>
+    <header class="header">
+            <h1 class="header__title">
+                Social Media Dashboard
+            </h1>
+            <p class="header__paragraph">
+                Total Followers: 23,004
+            </p>
+        <section class="header__darkMode">
+            <h3 class="darkMode__title">Dark Mode</h3>
+            <label for="checkbox" class="darkMode__label">
+                <button class="darkMode__btn">
+                    <input type="checkbox" name="checkbox" class="darkMode__btn darkMode__btn--check">
+                </button>
+            </label>
         </section>
-        <h2 class="overview__title">Overview - Today</h2>
+    </header>
 
-        <section class="overview">
-            <article class="overview__cards">
-                <header class="overview__header">
-                    <span class="dark_mode__title">Page Views</span>
-                    <i class="social_icon facebook"></i> 
-                </header>
-                <footer class="overview__footer">
-                    <h3 class="footer__amount">87</h3>
-                    <p class="followers_ratio overview__total">3%</p>
-                </footer>
-            </article>
+    <section class="totalSection">
+        <article class="totalSection__card">
+            <header class="card__header">
+                <img src="./assets/facebook.svg" alt="facebook logo" class="card__img">
+                <span class="header__user">@yosef_rios</span>
+            </header>
+            <p class="card__followers">2K</p>
+            <p class="card__subtitle">Followers</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">12 Today</span>
+            </div>
+        </article>
+        <article class="totalSection__card">
+            <header class="card__header">
+                <img src="./assets/Twitter_Social_Icon_Rounded_Square_Color.svg" alt="facebook logo" class="card__img">
+                <span class="header__user">@yosef_rios</span>
+            </header>
+            <p class="card__followers">500</p>
+            <p class="card__subtitle">Followers</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">12 Today</span>
+            </div>
+        </article>
+        <article class="totalSection__card">
+            <header class="card__header">
+                <img src="./assets/instagram.svg" alt="facebook logo" class="card__img">
+                <span class="header__user">@yosef_rios</span>
+            </header>
+            <p class="card__followers">200</p>
+            <p class="card__subtitle">Followers</p>
+            <div class="card__ratio card__ratio--red">
+                <i></i><span class="ratio__span">20 Today</span>
+            </div>
+        </article>
+        <article class="totalSection__card ">
+            <header class="card__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user">@yosef_rios</span>
+            </header>
+            <p class="card__followers">40</p>
+            <p class="card__subtitle">Followers</p>
+            <div class="card__ratio card__ratio--green card__ratio card__ratio--green--green">
+                <i></i><span class="ratio__span">40 today</span>
+            </div>
+        </article>
+    </section>
 
-            <article class="overview__cards">
-                <header class="overview__header">
-                    <span class="dark_mode__title">Likes</span>
-                    <i class="social_icon facebook"></i> 
-                </header>
-                <footer class="overview__footer">
-                    <h3 class="footer__amount">87</h3>
-                    <p class="followers_ratio overview__total">3%</p>
-                </footer>
-            </article>
+  
 
-            <article class="overview__cards">
-                <header class="overview__header">
-                    <span class="dark_mode__title">Likes</span>
-                    <i class="social_icon instagram"></i> 
-                </header>
-                <footer class="overview__footer">
-                    <h3 class="footer__amount">87</h3>
-                    <p class="followers_ratio overview__total">3%</p>
-                </footer>
-            </article>
+    <section class="overview">
+        <h3 class="overview__title">Overview - Today</h3>
+        <article class="totalSection__card overview__card">
+            <header class="card__header overview__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user overview__user">Page views</span>
+            </header>
+            <footer class="overview__footer">
+                <p class="card__followers overview__followers">40</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">330%</span>
+            </div>
+            </footer>
+        </article>
 
-            <article class="overview__cards">
-                <header class="overview__header">
-                    <span class="dark_mode__title">Profile Views</span>
-                    <i class="social_icon instagram"></i> 
-                </header>
-                <footer class="overview__footer">
-                    <h3 class="footer__amount">87</h3>
-                    <p class="followers_ratio overview__total">3%</p>
-                </footer>
-            </article>
+        <article class="totalSection__card overview__card">
+            <header class="card__header overview__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user overview__user">Page views</span>
+            </header>
+            <footer class="overview__footer">
+                <p class="card__followers overview__followers">40</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">330%</span>
+            </div>
+            </footer>
+        </article>
 
-            <article class="overview__cards">
-                <header class="overview__header">
-                    <span class="dark_mode__title">Retweets</span>
-                    <i class="social_icon twitter"></i> 
-                </header>
-                <footer class="overview__footer">
-                    <h3 class="footer__amount">87</h3>
-                    <p class="followers_ratio overview__total">3%</p>
-                </footer>
-            </article>
+        <article class="totalSection__card overview__card">
+            <header class="card__header overview__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user overview__user">Page views</span>
+            </header>
+            <footer class="overview__footer">
+                <p class="card__followers overview__followers">40</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">330%</span>
+            </div>
+            </footer>
+        </article>
 
-            <article class="overview__cards">
-                <header class="overview__header">
-                    <span class="dark_mode__title">Likes</span>
-                    <i class="social_icon twitter"></i> 
-                </header>
-                <footer class="overview__footer">
-                    <h3 class="footer__amount">87</h3>
-                    <p class="followers_ratio overview__total">3%</p>
-                </footer>
-            </article>
+        <article class="totalSection__card overview__card">
+            <header class="card__header overview__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user overview__user">Page views</span>
+            </header>
+            <footer class="overview__footer">
+                <p class="card__followers overview__followers">40</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">330%</span>
+            </div>
+            </footer>
+        </article>
 
-            <article class="overview__cards">
-                <header class="overview__header">
-                    <span class="dark_mode__title">Likes</span>
-                    <i class="social_icon youtube"></i> 
-                </header>
-                <footer class="overview__footer">
-                    <h3 class="footer__amount">87</h3>
-                    <p class="followers_ratio overview__total">3%</p>
-                </footer>
-            </article>
+        <article class="totalSection__card overview__card">
+            <header class="card__header overview__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user overview__user">Page views</span>
+            </header>
+            <footer class="overview__footer">
+                <p class="card__followers overview__followers">40</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">330%</span>
+            </div>
+            </footer>
+        </article>
 
-            <article class="overview__cards">
-                <header class="overview__header">
-                    <span class="dark_mode__title">Total Views</span>
-                    <i class="social_icon youtube"></i> 
-                </header>
-                <footer class="overview__footer">
-                    <h3 class="footer__amount">87</h3>
-                    <p class="followers_ratio overview__total">3%</p>
-                </footer>
-            </article>
+        <article class="totalSection__card overview__card">
+            <header class="card__header overview__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user overview__user">Page views</span>
+            </header>
+            <footer class="overview__footer">
+                <p class="card__followers overview__followers">40</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">330%</span>
+            </div>
+            </footer>
+        </article>
 
-        </section>
+        <article class="totalSection__card overview__card">
+            <header class="card__header overview__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user overview__user">Page views</span>
+            </header>
+            <footer class="overview__footer">
+                <p class="card__followers overview__followers">40</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">330%</span>
+            </div>
+            </footer>
+        </article>
 
-    </main>
-    
-
-    <script src="./js/app.js"></script>
+        <article class="totalSection__card overview__card">
+            <header class="card__header overview__header">
+                <img src="./assets/youtube.svg" alt="facebook logo" class="card__img">
+                <span class="header__user overview__user">Page views</span>
+            </header>
+            <footer class="overview__footer">
+                <p class="card__followers overview__followers">40</p>
+            <div class="card__ratio card__ratio--green">
+                <i></i><span class="ratio__span">330%</span>
+            </div>
+            </footer>
+        </article>
+    </section>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,210 @@
+$headerBackground: #f5f7ff;
+$btnBackground: #aeb3cb;
+$primaryGrayText: #7176a1;
+$primaryBackground: #ffffff;
+$cardBackground: #f0f2fa;
+$cardBackgroundActive: #e4e4e4;
+$cardtopColor: #1ca0f2;
+$greenText: #1db489;
+$redText: #dc414c;
+$headerDarkModeBackground: #1f212e;
+$primaryDarkModeBackground: #1e202a;
+$cardDarkModeBackground: #252a41;
+@mixin blue-title {
+    font-size: 2rem;
+    color: $primaryGrayText;
+    font-weight: bold;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    line-height: 5rem;
+    width: 100%;
+    min-width: 320px;
+    height: 534px;
+    background-color: $headerBackground;
+    transition: 0.5s;
+&--dark {
+    background-color: $headerDarkModeBackground;
+}
+.header__title {
+    line-height: 4rem;
+    font-size: 4rem;
+    &--dark {
+        color: white;
+    }
+    }
+    .header__paragraph {
+        @include blue-title();
+        font-size: 3rem;
+    }
+    &__darkMode {
+        display: flex;
+        align-self: center;
+        align-items: center;
+    }
+    .darkMode__title {
+        @include blue-title();
+        margin-right: 3rem;
+        font-size: 3rem;
+    }
+    .darkMode__label {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 45px;
+        border-radius: 50px;
+        background-color: $btnBackground;
+        .darkMode__btn {
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 100%;
+            transition: 0.5s;
+            cursor: pointer;
+            &--on {
+                transform: translateX(53px);
+                transition: 0.5s;
+            }
+            &--check {
+                opacity: 0;
+            }
+        }
+    }
+
+}
+
+.totalSection {
+    display: grid;
+    gap:6rem;
+    background-color: $primaryBackground;
+    &--dark {
+        background-color: $primaryDarkModeBackground;
+    }
+    &__card {
+        transform: translateY(10rem);
+        justify-self: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 70rem;
+        width: 80rem;
+        border-radius: 20px;
+        background-color: $cardBackground;
+        transition: 0.7s;
+        &:hover {
+            background-color: $cardBackgroundActive;
+        }
+        & img {
+            width: 50px;
+            height: 50px;
+        }
+        &::before {
+            position: absolute;
+            top:0;
+            width: 20%;
+            height: 10px;
+            background-color: $cardtopColor;
+            content: "";
+        }
+        &:nth-child(3)::before {
+            background-color: orangered;
+        }
+        &:nth-child(4)::before {
+            background-color: red;
+        }
+        &--dark {
+            background-color: $cardDarkModeBackground;
+        }
+        .card__header {
+            display: flex;
+            align-items: center;
+            .header__user {
+                margin-left: 2rem;
+                font-size: 3.5rem;
+                font-weight: bold;
+                color: $primaryGrayText;
+            }
+        }
+        .card__followers {
+            font-size: 9rem;
+            line-height: 1rem;
+            font-weight: bold;
+            &--dark {
+                color: #fff;
+            }
+        }
+        .card__subtitle {
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            font-weight: 500;
+            color: $cardDarkModeBackground;
+            text-transform: uppercase;
+
+            &--dark {
+                color: $primaryGrayText;
+            }
+        }
+        .card__ratio {
+            font-weight: bold;
+            font-size: 3.2rem;
+
+            &--green {
+                color:$greenText;
+            }
+            &--red {
+                color: $redText;
+            }
+        }
+    }
+}
+
+.overview {
+    display: grid;
+    gap: 8rem;
+    &--dark {
+        background-color: $primaryDarkModeBackground;
+    }
+    .overview__title {
+    margin: 3rem 0;
+    font-size: 3rem;
+    text-align: center;
+    &--dark {
+        color: $primaryGrayText;
+    }
+    }
+    .overview__card {
+        height: 50rem;
+        padding: 0 10rem;
+        margin: 0 auto;
+        border-radius: 20px;
+    .overview__header {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &::before {
+        display: none;
+    }
+    .overview__footer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+  }
+}
+
+
