@@ -1,0 +1,35 @@
+.header {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:flex-start;
+    padding-top: 50px;
+    height: 270px;
+    line-height: 3rem;
+    &__information {
+        align-items: flex-start;
+        .information__title {
+            font-size: 2.5rem;
+        }
+    }
+    &__darkmode {
+        width: 150px;
+        justify-content: space-between;
+    }
+}
+.cards__card {
+    transform: translateY(-80px);
+}
+.overview {
+    display: grid;
+    grid-template-columns: repeat(4, fit-content);
+}
+
+@media screen and (min-width: 1090px) {
+    .overview {
+        grid-template-columns: repeat(4, max-content);
+        }
+    .overview__title {
+        transform: translateY(-50px);
+        margin: 0;
+    }
+}

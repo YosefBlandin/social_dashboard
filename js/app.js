@@ -1,33 +1,37 @@
-let checkbox = document.querySelector('.checkbox');
-let btn1 = document.querySelectorAll('.btn_disabled');
+let darkbtn = document.querySelector(".darkmode__button");
+let checkbox = document.querySelector(".checkbox");
+let header = document.querySelector('.header');
+let headerTitle = document.querySelector('.information__title');
 let container = document.querySelector('.container');
-let header_title = document.querySelector('.title')
-let card = document.querySelectorAll('.card')
-let user_followers = document.getElementsByTagName('h3')
-let overview_card = document.querySelectorAll('.overview__cards')
-let dark_mode__container = document.querySelector('.dark_mode__container')
+let card = document.querySelectorAll('.cards__card');
+let cardFollowers = document.querySelectorAll('.card__followers');
+let overviewCards = document.querySelectorAll('.overview__card')
+let overviewFollowers = document.querySelectorAll('.footer__amount')
 
 checkbox.addEventListener('click', () => {
-    let user = Object.values(user_followers);
-    console.log(checkbox.checked)
-    console.log(checkbox.classList)
-    if (checkbox.checked === true) {
-        btn1.forEach(e => e.classList.replace('btn_disabled', 'btn_enabled'))
-        container.style.background = "white";
-        header_title.style.color = "black";
-        card.forEach(cards => cards.style.background = "whitesmoke")
-        overview_card.forEach(e => e.style.background = "whitesmoke")
-        user.forEach(e => e.style.color = "black")
-        dark_mode__container.style.border = "3px solid #252a41"
+   checkbox.checked === true ? switchON() : switchOFF();
+});
 
-    } else {
-         btn1.forEach(e => e.classList.replace('btn_enabled', 'btn_disabled'))
-        container.style.background = "#1e202a";
-        header_title.style.color = "white";
-        overview_card.forEach(e => e.style.background = "#252a41")
-        card.forEach(cards => cards.style.background = "#252a41")
-        user.forEach(e => e.style.color = "white")
-        dark_mode__container.style.border = "3px solid white"
-    }
+function switchON() {
+    darkbtn.classList.toggle('darkmode__button--on')
+    header.classList.toggle('header--dark')
+    headerTitle.classList.toggle('information__title--dark')
+    container.classList.toggle('container--dark')
+    cardFollowers.forEach(e => e.classList.toggle('card__followers--dark'))
+    card.forEach(e => e.classList.toggle('cards__card--dark'))
+    overviewCards.forEach(e => e.classList.toggle('overview__card--dark'))
+    overviewFollowers.forEach(e => e.classList.toggle('footer__amount--dark'))
+}
 
-})
+function switchOFF() {
+    darkbtn.classList.remove('darkmode__button--on') 
+    header.classList.remove('header--dark')
+    headerTitle.classList.remove('information__title--dark')
+    container.classList.remove('container--dark')
+    cardFollowers.forEach(e => e.classList.remove('card__followers--dark'))
+    card.forEach(e => e.classList.remove('cards__card--dark'))
+    overviewCards.forEach(e => e.classList.remove('overview__card--dark'))
+    overviewFollowers.forEach(e => e.classList.remove('footer__amount--dark'))
+}
+
+
